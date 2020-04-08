@@ -1,0 +1,20 @@
+int a,b,temp;
+
+real f;
+f := -+-10.0;
+a:=0;
+b:=0;
+
+a++;
+a++;
+a++;
+--a;
+
+b--;
+write b;
+write a;
+temp:= 100;
+a := a - --b;
+write a;
+write temp;
+write f;

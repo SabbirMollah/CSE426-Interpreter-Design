@@ -1,0 +1,103 @@
+dtype => INT
+dec_idlist => dtype ID
+dec_idlist => dec_idlist COMMA ID 
+dec_idlist => dec_idlist COMMA ID 
+var_decl => dec_idlist SEMI
+stmt => var_decl
+
+dtype => REAL
+dec_idlist => dtype ID
+var_decl => dec_idlist SEMI
+stmt => var_decl
+
+const => RLIT
+term => const
+term => - term
+term => + term
+term => - term
+expr => term
+assignment => ID ASSIGN expr SEMI
+stmt => assignment
+
+const => const
+term => const
+expr => term
+assignment => ID ASSIGN expr SEMI
+stmt => assignment
+
+const => const
+term => const
+expr => term
+assignment => ID ASSIGN expr SEMI
+stmt => assignment
+
+incremental => ID INCREMENT
+assignment => incremental SEMI
+stmt => assignment
+
+incremental => ID INCREMENT
+assignment => incremental SEMI
+stmt => assignment
+
+incremental => ID INCREMENT
+assignment => incremental SEMI
+stmt => assignment
+
+incremental => DECREMENT ID
+assignment => incremental SEMI
+stmt => assignment
+
+incremental => ID INCREMENT
+assignment => incremental SEMI
+stmt => assignment
+
+readwrite => WRITE ID SEMI
+stmt => readwrite
+
+readwrite => WRITE ID SEMI
+stmt => readwrite
+
+const => const
+term => const
+expr => term
+assignment => ID ASSIGN expr SEMI
+stmt => assignment
+
+term => ID
+expr => term
+optr => -
+incremental => DECREMENT ID
+term => incremental
+expr => term
+expr => expr optr expr 
+assignment => ID ASSIGN expr SEMI
+stmt => assignment
+
+readwrite => WRITE ID SEMI
+stmt => readwrite
+
+readwrite => WRITE ID SEMI
+stmt => readwrite
+
+readwrite => WRITE ID SEMI
+stmt => readwrite
+
+prog => empty
+prog => stmt stmts
+prog => stmt stmts
+prog => stmt stmts
+prog => stmt stmts
+prog => stmt stmts
+prog => stmt stmts
+prog => stmt stmts
+prog => stmt stmts
+prog => stmt stmts
+prog => stmt stmts
+prog => stmt stmts
+prog => stmt stmts
+prog => stmt stmts
+prog => stmt stmts
+prog => stmt stmts
+prog => stmt stmts
+prog => stmt stmts
+prog => stmts
